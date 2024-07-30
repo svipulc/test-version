@@ -1,3 +1,14 @@
+# 1.0.0 (2024-07-30)
+
+
+### Bug Fixes
+
+* add chromatic in project ([eb12fd7](https://github.com/svipulc/test-version/commit/eb12fd752d81ac686dca1eacd74e8f3f486aff6d))
+* add release ([584e137](https://github.com/svipulc/test-version/commit/584e137e6086e8440423c274488d0c494160f55e))
+* cicd for storybook ([6368c7f](https://github.com/svipulc/test-version/commit/6368c7fc5278fbb3bc876e2fd2a85e96e9ae2c01))
+* remove nodemodule ([c245fbc](https://github.com/svipulc/test-version/commit/c245fbc55e8b6bbbda546c64ab64d573ed8bcede))
+* update script for chromatic ([1cda026](https://github.com/svipulc/test-version/commit/1cda026a5d77ce453fada45503e09501bb5b4ec6))
+
 # 1.0.0 (2024-07-29)
 
 
