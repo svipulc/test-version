@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/svipulc/test-version/compare/v1.3.0...v1.3.1) (2024-07-30)
+
+
+### Bug Fixes
+
+* text check console log ([d2d3da9](https://github.com/svipulc/test-version/commit/d2d3da9b761565e232be6a2ee8274f758abec655))
+
 # [1.3.0](https://github.com/svipulc/test-version/compare/v1.2.0...v1.3.0) (2024-07-30)
 
 
