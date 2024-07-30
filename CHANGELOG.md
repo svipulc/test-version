@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/svipulc/test-version/compare/v1.1.0...v1.2.0) (2024-07-30)
+
+
+### Features
+
+* add card component ([868de1b](https://github.com/svipulc/test-version/commit/868de1b6956c19bab7dd9915422e42b54415b070))
+
 # [1.1.0](https://github.com/svipulc/test-version/compare/v1.0.0...v1.1.0) (2024-07-30)
 
 
