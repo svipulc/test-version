@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/svipulc/test-version/compare/v1.0.0...v1.1.0) (2024-07-30)
+
+
+### Bug Fixes
+
+* cicd for storybook ([d1b6ee7](https://github.com/svipulc/test-version/commit/d1b6ee79577e49dafa3ac7f133bc4a06a49e9317))
+
+
+### Features
+
+* add input component ([e8a0dad](https://github.com/svipulc/test-version/commit/e8a0dadfcb186b48e3a91e992c4ac354e4728724))
+
 # 1.0.0 (2024-07-30)
 
 
