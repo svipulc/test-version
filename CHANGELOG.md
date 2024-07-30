@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/svipulc/test-version/compare/v1.2.0...v1.3.0) (2024-07-30)
+
+
+### Features
+
+* add label component ([3abb134](https://github.com/svipulc/test-version/commit/3abb134e4ce3d8a492fc9fac33ff791babf4c9b9))
+
 # [1.2.0](https://github.com/svipulc/test-version/compare/v1.1.0...v1.2.0) (2024-07-30)
 
 
