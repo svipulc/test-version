@@ -6,14 +6,14 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "chromatic": "npx chromatic --project-token=chpt_c6b187fd0b0bf4a",
     "commit": "cz",
     "prepare": "husky",
-    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,md}'"
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@semantic-release/changelog": "^6.0.3",
@@ -48,17 +48,22 @@
     "@storybook/test": "^8.2.4",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "@typescript-eslint/eslint-plugin": "^7.13.1",
-    "@typescript-eslint/parser": "^7.13.1",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
     "@vitejs/plugin-react": "^4.3.1",
     "@vitejs/plugin-react-swc": "^3.7.0",
     "chromatic": "^11.5.6",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.35.0",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
     "eslint-plugin-storybook": "^0.8.0",
     "husky": "^9.1.4",
+    "lint-staged": "^15.2.7",
+    "prettier": "^3.3.3",
     "storybook": "^8.2.4",
     "storybook-dark-mode": "^4.0.2",
     "typescript": "^5.2.2",
@@ -79,5 +84,11 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/svipulc/test-version"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "npm run lint",
+      "prettier --write"
+    ]
   }
 }

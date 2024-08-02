@@ -1,15 +1,14 @@
 // Avatar component style
 
-import { cva } from "class-variance-authority";
+import { cva } from 'class-variance-authority';
 
 // Avatar
 export const avatarStyles = cva(
   [
     // css style
-    "w-full",
-    "h-full",
-    "flex justify-center items-center",
-    ,
+    'w-full',
+    'h-full',
+    'flex justify-center items-center',
   ],
   {
     variants: {
@@ -18,9 +17,9 @@ export const avatarStyles = cva(
       },
       size: {
         //size
-        sm: "w-12 h-12",
-        md: "w-14 h-14",
-        lg: "w-16 h-16",
+        sm: 'w-12 h-12',
+        md: 'w-14 h-14',
+        lg: 'w-16 h-16',
       },
     },
     compoundVariants: [
@@ -28,7 +27,7 @@ export const avatarStyles = cva(
     ],
     defaultVariants: {
       // default variants
-      size: "md",
+      size: 'md',
     },
   }
 );
@@ -37,10 +36,10 @@ export const avatarStyles = cva(
 export const avatarImageStyle = cva(
   [
     // css style
-    "w-full",
-    "h-full",
-    "rounded-full",
-    "object-cover",
+    'w-full',
+    'h-full',
+    'rounded-full',
+    'object-cover',
   ],
   {
     variants: {
@@ -49,9 +48,9 @@ export const avatarImageStyle = cva(
       },
       size: {
         //size
-        sm: "w-12 h-12",
-        md: "w-14 h-14",
-        lg: "w-16 h-16",
+        sm: 'w-12 h-12',
+        md: 'w-14 h-14',
+        lg: 'w-16 h-16',
       },
     },
     compoundVariants: [
@@ -59,7 +58,7 @@ export const avatarImageStyle = cva(
     ],
     defaultVariants: {
       // default variants
-      size: "md",
+      size: 'md',
     },
   }
 );
@@ -68,11 +67,11 @@ export const avatarImageStyle = cva(
 export const avatarFallbackStyle = cva(
   [
     // css style
-    "w-full",
-    "h-full",
-    "rounded-full",
-    "bg-silverSteel",
-    "flex justify-center items-center",
+    'w-full',
+    'h-full',
+    'rounded-full',
+    'bg-silverSteel',
+    'flex justify-center items-center',
   ],
   {
     variants: {
@@ -81,9 +80,9 @@ export const avatarFallbackStyle = cva(
       },
       size: {
         //size
-        sm: "w-12 h-12",
-        md: "w-14 h-14",
-        lg: "w-16 h-16",
+        sm: 'w-12 h-12',
+        md: 'w-14 h-14',
+        lg: 'w-16 h-16',
       },
     },
     compoundVariants: [
@@ -91,7 +90,7 @@ export const avatarFallbackStyle = cva(
     ],
     defaultVariants: {
       // default variants
-      size: "md",
+      size: 'md',
     },
   }
 );
