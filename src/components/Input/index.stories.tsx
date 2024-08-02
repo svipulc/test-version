@@ -1,13 +1,13 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { Input } from '.';
+import type { Meta, StoryObj } from "@storybook/react";
+import { Input } from ".";
 
 const meta: Meta<typeof Input> = {
-  title: 'Components/Input',
+  title: "Components/Input",
   component: Input,
   parameters: {
-    layout: 'centered',
+    layout: "centered",
   },
-  tags: ['autodocs'],
+  tags: ["autodocs"],
 };
 
 export default meta;

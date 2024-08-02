@@ -1,17 +1,17 @@
 // Avatar Component
-import { cn } from '@/utils';
-import { VariantProps } from 'class-variance-authority';
-import React, { ComponentProps } from 'react';
-import { avatarFallbackStyle, avatarImageStyle, avatarStyles } from './index.style';
+import { cn } from "@/utils";
+import { VariantProps } from "class-variance-authority";
+import React, { ComponentProps } from "react";
+import { avatarFallbackStyle, avatarImageStyle, avatarStyles } from "./index.style";
 
 // Avatar
 
 type CustomAvatarProps = {
   children?: React.ReactNode;
-  size?: 'sm' | 'md' | 'lg';
+  size?: "sm" | "md" | "lg";
 };
 
-type AvatarProps = ComponentProps<'div'> & CustomAvatarProps & VariantProps<typeof avatarStyles>;
+type AvatarProps = ComponentProps<"div"> & CustomAvatarProps & VariantProps<typeof avatarStyles>;
 
 export const Avatar: React.FC<AvatarProps> = ({ children, size, className, ...props }) => {
   return (
@@ -25,24 +25,24 @@ export const Avatar: React.FC<AvatarProps> = ({ children, size, className, ...pr
 
 type CustomAvatarImageProps = {
   src: string;
-  size?: 'sm' | 'md' | 'lg';
+  size?: "sm" | "md" | "lg";
   alt?: string;
   fallback?: React.ReactNode;
 };
 
-type AvatarImageProps = ComponentProps<'img'> &
+type AvatarImageProps = ComponentProps<"img"> &
   CustomAvatarImageProps &
   VariantProps<typeof avatarImageStyle>;
 
 export const AvatarImage: React.FC<AvatarImageProps> = ({
   src,
-  size = 'md',
-  alt = 'Alternative Text',
+  size = "md",
+  alt = "Alternative Text",
   fallback,
   className,
   ...props
 }) => {
-  if (!src || src === '') {
+  if (!src || src === "") {
     return <AvatarFallback size={size} alt={alt} fallback={fallback} />;
   }
   return (
@@ -53,12 +53,12 @@ export const AvatarImage: React.FC<AvatarImageProps> = ({
 // Avatar Fallback
 
 type CustomAvatarFallbackProps = {
-  size?: 'sm' | 'md' | 'lg';
+  size?: "sm" | "md" | "lg";
   alt?: string;
   fallback?: React.ReactNode;
 };
 
-type AvatarFallbackProps = ComponentProps<'div'> &
+type AvatarFallbackProps = ComponentProps<"div"> &
   CustomAvatarFallbackProps &
   VariantProps<typeof avatarFallbackStyle>;
 
@@ -73,7 +73,7 @@ export const AvatarFallback: React.FC<AvatarFallbackProps> = ({
     <div className={cn(avatarFallbackStyle({ size }), className)} {...props}>
       {fallback && fallback}
       {alt && !fallback && getInitials(alt)}
-      {!alt && !fallback && '?'}
+      {!alt && !fallback && "?"}
     </div>
   );
 };
