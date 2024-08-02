@@ -3,9 +3,15 @@
   "private": false,
   "version": "1.0.0",
   "type": "module",
+  "main": "dist/evoke-ui.umd.js",
+  "module": "dist/evoke-ui.es.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc  && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",

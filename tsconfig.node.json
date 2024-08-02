@@ -2,12 +2,15 @@
   "compilerOptions": {
     "composite": true,
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
-    "skipLibCheck": true,
+    "skipLibCheck": false, // Consider removing this for stricter checks
     "module": "ESNext",
     "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
     "strict": true,
-    "noEmit": true
+    "noEmit": false, // Set to false to allow emitting .d.ts and .js files
+    "declaration": true, // Add this to generate .d.ts files
+    "declarationDir": "./dist/types",
+    "jsx": "react-jsx" // Optional: specify where to output .d.ts files
   },
-  "include": ["vite.config.ts"]
+  "include": ["vite.config.ts", "src/**/*"] // Include other relevant TypeScript files
 }
