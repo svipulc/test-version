@@ -1,8 +1,11 @@
 {
   "name": "@svipulc/evoke-ui",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.1.1",
   "type": "module",
+  "main": "dist/evoke-ui.umd.js",
+  "module": "dist/evoke-ui.es.js",
+  "types": "dist/types/index.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -13,7 +16,8 @@
     "chromatic": "npx chromatic --project-token=chpt_c6b187fd0b0bf4a",
     "commit": "cz",
     "prepare": "husky",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "prebuild": "rimraf dist"
   },
   "dependencies": {
     "@semantic-release/changelog": "^6.0.3",
@@ -67,7 +71,8 @@
     "storybook": "^8.2.4",
     "storybook-dark-mode": "^4.0.2",
     "typescript": "^5.2.2",
-    "vite": "^5.3.1"
+    "vite": "^5.3.1",
+    "vite-plugin-checker": "^0.7.2"
   },
   "config": {
     "commitizen": {

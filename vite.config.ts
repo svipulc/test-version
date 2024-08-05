@@ -8,6 +8,9 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import dts from "vite-plugin-dts";
+import checker from "vite-plugin-checker";
+import tailwindcss from "tailwindcss";
+import autoprefixer from "autoprefixer";
 
 export default defineConfig({
   // Specify the base directory for the build
@@ -37,13 +40,20 @@ export default defineConfig({
     },
   },
   plugins: [
+    checker({ typescript: true }),
     react(), // Enables React support
     dts({
       // Plugin to generate TypeScript declaration files
       insertTypesEntry: true, // Automatically include a types entry in package.json
       outDir: "../dist/types", // Output directory for types
+      exclude: "**/*.stories.tsx", // Exclude stories from type generation
     }),
   ],
+  css: {
+    postcss: {
+      plugins: [tailwindcss, autoprefixer],
+    },
+  },
   // Optional: Define any server options
   server: {
     port: 3000, // Development server port
