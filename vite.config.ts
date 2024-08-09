@@ -3,8 +3,9 @@ import react from "@vitejs/plugin-react-swc";
 import dts from "vite-plugin-dts";
 import { resolve } from "path";
 import { libInjectCss } from "vite-plugin-lib-inject-css";
-import tailwindcss from "autoprefixer";
+import tailwindcss from "tailwindcss";
 import autoprefixer from "autoprefixer";
+import path from "path";
 
 export default defineConfig({
   plugins: [
@@ -22,10 +23,15 @@ export default defineConfig({
       rollupTypes: true,
     }),
   ],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
   build: {
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
-      name: "MyComponentLibrary",
+      name: "evoke-ui",
       formats: ["es", "cjs"],
     },
     rollupOptions: {
