@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 import dts from "vite-plugin-dts";
 import { resolve } from "path";
 import { libInjectCss } from "vite-plugin-lib-inject-css";
-import tailwindcss from "autoprefixer";
+import tailwindcss from "tailwindcss";
 import autoprefixer from "autoprefixer";
 
 export default defineConfig({
