@@ -3,9 +3,12 @@
   "private": false,
   "version": "1.1.1",
   "type": "module",
-  "main": "dist/evoke-ui.umd.js",
-  "module": "dist/evoke-ui.es.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -17,7 +20,8 @@
     "commit": "cz",
     "prepare": "husky",
     "format": "prettier --write .",
-    "prebuild": "rimraf dist"
+    "prebuild": "rimraf dist",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@semantic-release/changelog": "^6.0.3",
@@ -50,6 +54,7 @@
     "@storybook/react": "^8.2.4",
     "@storybook/react-vite": "^8.2.4",
     "@storybook/test": "^8.2.4",
+    "@swc/plugin-react-remove-properties": "^2.0.9",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
@@ -72,7 +77,8 @@
     "storybook-dark-mode": "^4.0.2",
     "typescript": "^5.2.2",
     "vite": "^5.3.1",
-    "vite-plugin-checker": "^0.7.2"
+    "vite-plugin-checker": "^0.7.2",
+    "vite-plugin-lib-inject-css": "^2.1.1"
   },
   "config": {
     "commitizen": {
